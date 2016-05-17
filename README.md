@@ -14,4 +14,14 @@ Sample project demonstrating the setup for an Apache Spark project which doesn't
   * You don't need Hadoop installed, but wherever you put `winutils.exe` it needs to be found at `%HADOOP_HOME%\bin`
   * Define `JAVA_OPTS` to be `-Dhadoop.home.dir=C:\hadoop` (assuming you put `winutils.exe` at `C:\hadoop\bin`). Append this setting if you already have `JAVA_OPTS` defined.
   
-  
+#Running
+
+To make sure you've correctly setup the project first run:
+
+    $ sbt
+
+Then from the sbt prompt:
+
+    sbt> first-app
+
+If it runs successfully there should be an `output/shakespeare-wc/[timestamp]` folder with `part-00000` and `part-00001` files which contain the output.  
