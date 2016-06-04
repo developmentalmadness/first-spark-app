@@ -24,6 +24,24 @@ Then from the sbt prompt:
 
     sbt> first-app
 
+#REPL
+
+To run the REPL:
+
+    $ sbt console
+
+From here you can experiment, like this:
+
+    scala> val numbers = sc.parallelize(10 to 50 by 10)
+    numbers: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[0] at parallelize at <console>:21
+
+    scala numbers.foreach(println)
+    30
+    40
+    20
+    50
+    10
+
 If it runs successfully there should be an `output/shakespeare-wc/[timestamp]` folder with `part-00000` and `part-00001` files which contain the output.  
 
 #IDE
