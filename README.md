@@ -24,6 +24,8 @@ Then from the sbt prompt:
 
     sbt> first-app
 
+If it runs successfully there should be an `output/shakespeare-wc/[timestamp]` folder with `part-00000` and `part-00001` files which contain the output.  
+
 #REPL
 
 To run the REPL:
@@ -41,8 +43,6 @@ From here you can experiment, like this:
     20
     50
     10
-
-If it runs successfully there should be an `output/shakespeare-wc/[timestamp]` folder with `part-00000` and `part-00001` files which contain the output.  
 
 #IDE
 
