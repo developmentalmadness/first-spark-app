@@ -1,7 +1,9 @@
 *.class
 *.log
-
-output/
+logs
+*.lock
+html
+output
 
 # sbt specific
 .cache
@@ -13,7 +15,24 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+.sbtserver
 
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+
+# Eclipse
+.classpath
+.project
+.settings/
+/bin/
+RUNNING_PID
+
+# Intellij
+.idea/
+/.idea_modules
+*.iml
+*.iws
+
+# Mac
+.DS_Store
