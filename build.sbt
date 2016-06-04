@@ -5,10 +5,6 @@ initialCommands += """
   import org.apache.spark.{SparkContext, SparkConf}
   import org.apache.spark.SparkContext._
   import org.apache.spark.sql.SQLContext
-  // Hack: remove stale Hive metastore locks from prior sessions, if any.
-  com.lightbend.training.util.FileUtil.rmrf(
-    new java.io.File("metastore_db/db.lck"),
-    new java.io.File("metastore_db/dbex.lck"))
 
   val sparkConf = new SparkConf()
   sparkConf.setMaster("local[*]")
