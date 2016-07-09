@@ -57,6 +57,7 @@ object Dependency {
   val sparkRepl      = "org.apache.spark"  %% "spark-repl"      % Version.Spark  withSources()
   val sparkMLlib     = "org.apache.spark"  %% "spark-mllib"     % Version.Spark  withSources()
   val sparkHive      = "org.apache.spark"  %% "spark-hive"      % Version.Spark  withSources()
+  val sparkGraphX    = "org.apache.spark"  %% "spark-graphx"    % Version.Spark  withSources()
 
   // These two dependencies exist only to force Windows-compatible versions of Hadoop
   // (first one) and consistent versions of javax.servlet (second one).
@@ -75,7 +76,7 @@ object Dependencies {
 
   val sparkWorkshop =
     Seq(hadoopClient, javaX,
-      sparkCore, sparkStreaming, sparkSQL, sparkHive, sparkMLlib, // sparkRepl,
+      sparkCore, sparkStreaming, sparkSQL, sparkHive, sparkMLlib, sparkGraphX, // sparkRepl,
       scalaTest, scalaCheck, playJson)
 }
 

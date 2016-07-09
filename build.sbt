@@ -9,6 +9,7 @@ initialCommands += """
   val sparkConf = new SparkConf()
   sparkConf.setMaster("local[*]")
   sparkConf.setAppName("Spark Console")
+  sparkConf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
   // Silence annoying warning from the Metrics system:
   sparkConf.set("spark.app.id", "Spark Console")
   val sc = new SparkContext(sparkConf)
